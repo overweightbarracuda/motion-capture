@@ -1,7 +1,7 @@
 import cv2
 from cvzone.PoseModule import PoseDetector
 
-cap = cv2.VideoCapture('PXL_20221119_195052395.TS.mp4')
+cap = cv2.VideoCapture('(636) How to Throw the Perfect Jab in Boxing - YouTube and 1 more page - Personal - Microsoft​ Edge 2022-11-22 13-44-09.mp4')
 
 detector = PoseDetector()
 posList = []
@@ -27,7 +27,7 @@ while True:
 
     except:
         print("no img left, ok please thank you very much love")
-        with open("AnimFile2.txt", "w") as f:
+        with open("BigBoyJab.txt", "w") as f:
                 f.writelines(["%s\n" % pos for pos in posList])
         break
 
