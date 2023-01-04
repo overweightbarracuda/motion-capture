@@ -8,18 +8,19 @@ import torch.nn.functional as F
 import torch.optim as optim
 from PIL import Image
 import math
+import os
 
 
 videos = []
-
-for vid in os.listdir("./JTT/"):
+imgs = []
+for vid in os.listdir("C://JTT/"):
     loc = []
-    with open("./jabt/"+vid) as f:
+    with open("C://JTT/"+vid) as f:
         for line in f.readlines():
             loc.append([i.split(",") for i in line.split(";")])
     imgs.append(loc)
-    
-    class RNN(nn.Module):
+
+class RNN(nn.Module):
     def __init__(self, input_size, output_size, hidden_dim, n_layers):
         super(RNN, self).__init__()
         # Defining some parameters
