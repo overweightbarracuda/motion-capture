@@ -27,8 +27,15 @@ for video in trainRNN:
     for frame in video:
         for coords in frame:
             for coord in coords:
-                trainRNN[trainRNN.index(video)][video.index(frame)][farme.index(coords)][trainRNN.index(coord)] = int(trainRNN[trainRNN.index(video)][trainRNN.index(frame)][trainRNN.index(coords)][trainRNN.index(coord)])
+                trainRNN[trainRNN.index(video)][video.index(frame)][frame.index(coords)][coords.index(coord)] = int(trainRNN[trainRNN.index(video)][video.index(frame)][frame.index(coords)][coords.index(coord)])
+for video in labelRNN:
+    for frame in video:
+        for coords in frame:
+            for coord in coords:
+                labelRNN[labelRNN.index(video)][video.index(frame)][frame.index(coords)][coords.index(coord)] = int(labelRNN[labelRNN.index(video)][video.index(frame)][frame.index(coords)][coords.index(coord)])
 
+trainRNN = torch.tensor(trainRNN)                
+labelRNN = torch.tensor(labelRNN)
                 
                 
 
